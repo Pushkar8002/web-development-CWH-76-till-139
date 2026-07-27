@@ -1,0 +1,174 @@
+# 🚀 How to Start a Server in Node.js (Express)
+
+## Step 1: Open the Terminal
+
+Open the terminal in your project folder.
+
+---
+
+## Step 2: Install Express
+
+Run the following command:
+
+**Terminal**
+
+```bash
+npm install express
+```
+
+---
+
+## Step 3: Create `app.js`
+
+Create a new file named **`app.js`** and add the following code:
+
+```javascript
+const express = require("express");
+
+const app = express();
+const PORT = 3000;
+
+app.get("/", (req, res) => {
+    res.send("Server is running!");
+});
+
+app.listen(PORT, () => {
+    console.log(`🚀 Server started at http://localhost:${PORT}`);
+});
+```
+
+---
+
+## Step 4: Start the Server
+
+### Option 1: Using Node.js
+
+**Terminal**
+
+```bash
+node app.js
+```
+
+### Option 2: Using Nodemon (Recommended)
+
+**Terminal**
+
+```bash
+npx nodemon app.js
+```
+
+---
+
+## Step 5: Check the Output
+
+If the server starts successfully, you will see:
+
+```text
+🚀 Server started at http://localhost:3000
+```
+
+---
+
+## Step 6: Open Your Browser
+
+Go to:
+
+```text
+http://localhost:3000
+```
+
+You should see:
+
+```text
+Server is running!
+```
+
+---
+
+# 📌 Understanding `app.listen()`
+
+```javascript
+app.listen(PORT, () => {
+    console.log(`🚀 Server started at http://localhost:${PORT}`);
+});
+```
+
+- `app.listen()` starts the Express server.
+- `PORT` is the port number where the server will run.
+- The callback function runs after the server starts successfully.
+
+---
+
+# ❗ Common Error
+
+### Error
+
+```text
+Error: listen EADDRINUSE: address already in use :::3000
+```
+
+### Why does this happen?
+
+Another application is already using **Port 3000**.
+
+### How to Fix It
+
+**Option 1:** Stop the running server.
+
+**Terminal**
+
+```text
+Ctrl + C
+```
+
+**Option 2:** Change the port number.
+
+```javascript
+const PORT = 5000;
+```
+
+Then start the server again.
+
+**Terminal**
+
+```bash
+node app.js
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+project-folder/
+│── node_modules/
+│── package.json
+│── app.js
+```
+
+---
+
+# 💻 Useful Terminal Commands
+
+```bash
+# Install Express
+npm install express
+
+# Start the server
+node app.js
+
+# Start with Nodemon
+npx nodemon app.js
+```
+
+---
+
+# ✅ Summary
+
+1. Open the **Terminal**.
+2. Install Express.
+3. Create the `app.js` file.
+4. Write the Express server code.
+5. Start the server using `node app.js` or `npx nodemon app.js`.
+6. Open `http://localhost:3000` in your browser.
+7. Verify that **"Server is running!"** is displayed.
