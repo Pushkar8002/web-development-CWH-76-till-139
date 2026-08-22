@@ -1,0 +1,47 @@
+1. Create a React App
+
+Open the terminal and run:
+
+npm create vite@latest
+
+2. Set Up the Project
+
+Enter the project name.
+
+Select React.
+
+Select JavaScript (JS).
+
+3. Open the Project
+
+Open the project folder in VS Code.
+
+4. Install Dependencies
+
+In the terminal, run:
+
+npm install
+
+5. Start the React App
+
+Run:
+
+npm run dev
+
+This starts the React app and gives you a local server URL.
+
+Example:
+
+http://localhost:5173/
+
+Quick Memory
+
+Create → Select React → Select JS → Open in VS Code
+       ↓
+npm install
+       ↓
+npm run dev
+       ↓
+React App Running 🚀
+
+Note: Most React projects use this setup with Vite.
