@@ -1,0 +1,205 @@
+# Next.js Setup Guide
+
+## Introduction
+
+Next.js is a React framework used to create modern web applications.
+
+This guide explains how to create and run a basic Next.js project.
+
+---
+
+## Step 1: Install Node.js
+
+First, install **Node.js** on your computer.
+
+After installation, check whether Node.js is installed:
+
+```bash
+node -v
+```
+
+Also check npm:
+
+```bash
+npm -v
+```
+
+---
+
+## Step 2: Create a Next.js Project
+
+Open **Command Prompt / Terminal** and run:
+
+```bash
+npx create-next-app@latest my-next-app
+```
+
+Here, `my-next-app` is the name of the project.
+
+---
+
+## Step 3: Answer the Questions
+
+Next.js will ask some questions.
+
+For a simple project, you can select:
+
+```text
+TypeScript: No
+ESLint: Yes
+Tailwind CSS: Yes
+src/ directory: No
+App Router: Yes
+Turbopack: Yes
+Customize import alias: No
+```
+
+---
+
+## Step 4: Open the Project
+
+Move into the project folder:
+
+```bash
+cd my-next-app
+```
+
+---
+
+## Step 5: Start the Development Server
+
+Run:
+
+```bash
+npm run dev
+```
+
+You should see something like:
+
+```text
+Local: http://localhost:3000
+```
+
+Open this address in your browser:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Step 6: Understand the Folder Structure
+
+A basic Next.js project looks like:
+
+```text
+my-next-app/
+│
+├── app/
+│   ├── page.js
+│   ├── layout.js
+│   └── globals.css
+│
+├── public/
+├── package.json
+└── next.config.js
+```
+
+### Important files
+
+* `app/page.js` → Home page
+* `app/layout.js` → Common layout
+* `app/globals.css` → Global CSS
+* `public/` → Images and other public files
+* `package.json` → Project dependencies and scripts
+
+---
+
+## Step 7: File-Based Routing
+
+Next.js uses **file-based routing**.
+
+For example:
+
+```text
+app/
+├── page.js
+├── about/
+│   └── page.js
+└── contact/
+    └── page.js
+```
+
+Automatically creates:
+
+```text
+/          → Home
+/about     → About
+/contact   → Contact
+```
+
+So:
+
+> **Folder name = URL**
+
+and
+
+> **page.js = Web page**
+
+---
+
+## Step 8: Stop the Server
+
+To stop the development server, press:
+
+```text
+Ctrl + C
+```
+
+---
+
+## Quick Commands
+
+### Create project
+
+```bash
+npx create-next-app@latest my-next-app
+```
+
+### Open project
+
+```bash
+cd my-next-app
+```
+
+### Start project
+
+```bash
+npm run dev
+```
+
+### Open in browser
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Conclusion
+
+Next.js makes React development easier by providing features such as **file-based routing, fast rendering, SEO support, and API/backend functionality**.
+
+The basic process is:
+
+```text
+Install Node.js
+      ↓
+Create Next.js project
+      ↓
+cd my-next-app
+      ↓
+npm run dev
+      ↓
+Open localhost:3000
+```
