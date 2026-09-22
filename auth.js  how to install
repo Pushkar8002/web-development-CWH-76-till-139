@@ -1,0 +1,36 @@
+1. Open your project terminal
+cd my-project
+
+2. Install Auth.js
+npm install next-auth
+
+3. Create .env.local
+AUTH_SECRET=your-secret-key
+
+You can generate a secret with:
+
+npx auth secret
+
+4. Create auth.js
+
+In your project root:
+
+my-project/
+├── app/
+├── auth.js
+├── .env.local
+└── package.json
+
+Basic example:
+
+import NextAuth from "next-auth";
+
+export const { handlers, signIn, signOut, auth } = NextAuth({
+  providers: []
+});
+
+In short:
+
+npm install next-auth
+
+That's the main package you need for Auth.js in Next.js.
